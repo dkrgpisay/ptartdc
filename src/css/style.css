@@ -1,0 +1,234 @@
+html {
+	background-color: #eeeeee;
+	margin: 0;
+	font-family: "Titillium";
+	min-width: 1100px;
+	position: relative;
+}
+.clearfix { clear: both; }
+
+div#header {
+	background: #ffffff;
+	width: 100%;
+	border-bottom: 1px solid #cccccc;
+	box-sizing: border-box;
+	z-index: 100;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+@media (max-width: 1100px) {
+	div#header {
+		position: absolute;
+	}
+}
+div#header .container {
+	height: 70px;
+}
+div#header .left-con { float: left; }
+div#header .right-con { float: right; }
+div#header .right-con:before { height: 70px; vertical-align: middle; content: ""; display: inline-block;}
+#header #logo {
+	font-size: 1.7em;
+	display: inline-block;
+	width: 100px;
+	vertical-align: middle;
+	padding-top: 60px;
+	height: 0;
+	overflow: hidden;
+	background: url(../../images/logo.png) center no-repeat;
+}
+
+div#main-nav {
+	width: auto;
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+div#main-nav a {
+	display: block;
+	float: left;
+	padding: 0px 15px;
+	color: #155299;
+	text-transform: uppercase;
+	font-size: 1em;
+	letter-spacing: -1px;
+	height: 100%;
+	-webkit-transition: all 150ms ease-in-out;
+	-moz-transition: all 150ms ease-in-out;
+	-ms-transition: all 150ms ease-in-out;
+	-o-transition: all 150ms ease-in-out;
+	transition: all 150ms ease-in-out;
+}
+div#main-nav a:hover {
+	background: #155299;
+	color: #FFF;
+	cursor: pointer;
+}
+div#main-nav a div {
+	position: relative;
+	top: 50%;
+	margin-top: -0.4em;
+}
+
+div#main-content {
+	margin: 70px auto 0 auto;
+	padding: 10px;
+	width: 1016px;
+	font-size: 0;
+	position: relative;
+}
+div.box {
+	background: #FFF;
+	display: inline-block;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-mox-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	width: 250px;
+	height: 250px;
+	box-sizing: border-box;
+	vertical-align: top;
+	border: 1px solid #CCC;
+	margin: 2px;
+	position: relative;
+	font-size: 12pt;
+}
+div.box:hover {
+	cursor: pointer;
+	color: #29ABE2;
+	-webkit-transition: all 200ms ease-in-out;
+	-moz-transition: all 200ms ease-in-out;
+	-ms-transition: all 200ms ease-in-out;
+	-o-transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;
+}
+div.box.drilled {
+	background: #155299;
+	color: #FFF;
+}
+div.box.\32 -1 {
+	width: 504px;
+}
+div.box.\31 -2 {
+	height: 504px;
+}
+div.box.\32 -2 {
+	height: 504px;
+	width: 504px;
+}
+
+div.stat-num {
+	font-size: 7em;
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	top: 0.4em;
+	font-family: "poetsen";
+	letter-spacing: -2px;
+}
+div.stat-desc {
+	font-size: 1em;
+	position: absolute;
+	bottom: 4em;
+	text-align: center;
+	width: 80%;
+	padding: 0 10%;
+}
+
+div.box.drilled:after {width: 0px;
+	height: 0px;
+	border-left: 14px solid transparent;
+	border-right: 14px solid transparent;
+	border-bottom: 20px solid #F9F9F9;
+	z-index: 50;
+	content: "";
+	position: absolute;
+	left: 50%;
+	margin-left: -7px;
+	bottom: -3px;
+
+}
+
+div.drill-content-container {
+	width: 100%;
+	font-size: 10pt;
+	background: #F9F9F9;
+	box-sizing: border-box;
+	overflow: hidden;
+	color: #000;
+	position: relative;
+	z-index: 50;
+	border-radius: 5px;
+	padding: 0 10px;
+}
+div.expand-drill{
+	content: "";
+	position: absolute;
+	display: block;
+	width: 50px;
+	height: 50px;
+	border-radius: 5px;
+	bottom: 15px;
+	right: 15px;
+	background: url(../../images/expand-drill.png) center no-repeat;
+	background-color: #444;
+	opacity: 0.3;
+}
+div.expand-drill:hover {
+	opacity: 1;
+	cursor: pointer;
+}
+div.preloader {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+div.preloader:after {
+	background: url(../../images/preloader.gif);
+	content:"";
+	display: block;
+	height: 150px;
+	width: 150px;
+	background-color: #FFF;
+	background-position: center;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -100px;
+	margin-top: -75px;
+	border-radius: 100px;
+}
+div.drill-content {
+	box-sizing: border-box;
+	padding: 10px 5px;
+	max-height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+div.drill-content::-webkit-scrollbar {
+	width: 10px;
+	padding: 5px;
+}
+div.drill-content::-webkit-scrollbar-thumb {
+	background-color: #999;
+	border-radius: 100px;
+}
+
+div#user-login {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 20px;
+}
+a#login {
+	background: url(../../images/login.png) no-repeat;
+	height: 0; width: 30px;
+	padding-top: 30px;
+	overflow: hidden;
+	display: inline-block;
+}
+a#login:hover {
+	background-position: -30px 0;
+	cursor: pointer;
+}
